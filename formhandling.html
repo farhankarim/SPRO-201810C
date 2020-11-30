@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .makeMeRed {
+            background-color: red;
+            color: black;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veniam voluptas officiis </p>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+    <div class="mid">Lorem ipsum dolor sit, amet consectetur adipisicing elit</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+
+    <form action="" method="get">
+        <label for="">Enter Food</label>
+        <input type="text" name="item" id="item" placeholder="abc">
+        <input type="button" value="submit" id="submit">
+    </form>
+    <ul class="mygroc">
+        <li>Apple</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#item").attr("placeholder", "e.g orange,banana,mango etc");
+            $(".para").prepend("<h1> Prepended Text</h1>");
+            $(".para").append("<h1> Appended Text</h1>");
+            $("#submit").click(function () {
+                $(".para").toggleClass("makeMeRed");
+                var data = $("#item").val();
+
+                $(".mygroc").hide("<li> " + data + "</li>");
+            })
+            $("<div>--------------------------------</div>").insertAfter(".mid",)
+            $("<div>--------------------------------</div>").insertBefore(".mid",)
+
+        });
+    </script>
+</body>
+
+</html>

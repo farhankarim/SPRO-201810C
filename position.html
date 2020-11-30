@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: crimson;
+            height: 400px;
+            width: 500px
+        }
+
+        .child {
+            background-color: cyan;
+            position: absolute;
+            top: 30;
+            left: 0;
+            height: 300px;
+            width: 400px
+        }
+
+        #leftBtn {
+            position: relative;
+
+            z-index: 1;
+        }
+
+        #rightBtn {
+            position: relative;
+
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" class="btn" id="leftBtn" value="left">
+    <input type="button" class="btn" id="rightBtn" value="right">
+    <input type="button" class="btn" id="toggle" value="toggle">
+
+    <input type="button" class="btn" id="dance" value="dance">
+    <div class="parent">
+        PARENT
+        <div class="child">
+            CHILD
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).ready(function () {
+
+            $("#leftBtn").click(function () {
+                $(".child").animate({
+                    left: '-=50',
+                    top: '-=50',
+                    fontSize: '-=10px',
+                    opacity: '+=0.1'
+                });
+            });
+
+
+            $("#rightBtn").click(function () {
+                $(".child").animate({
+                    left: '+=50',
+                    top: '+=50',
+                    fontSize: '+=10px',
+                    opacity: '-=0.1',
+                });
+            });
+
+            $("#toggle").click(function () {
+                $(".parent").animate({
+                    height: 'toggle'
+                },3000);
+                $(".child").animate({
+                    height: 'toggle'
+                },5000);
+               
+            });
+
+            $("#dance").click(function () {
+                $(".child").animate({
+                   left:'50'
+                });
+                $(".child").animate({
+                   top:'150'
+                });
+                $(".child").animate({
+                   left:'-80'
+                });
+                $(".child").animate({
+                    top:'10'
+                });
+               
+               
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

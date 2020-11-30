@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="button" id="hidePara" value="Hide Paragraph">
+<input type="button" id="showPara" value="Show Paragraph">
+<input type="button" id="togglePara" value="Toggle Paragraph">
+    <div id="abc" style="background-color: chartreuse;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, nulla? Numquam quam sit iusto ab temporibus
+            maxime! Iste ab cum ratione rem ad dolor iure, quia, eos aliquid quibusdam magni.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+                
+                $("#showPara").dblclick(function(){
+                    $("#abc").show(2000)
+                });
+                
+                $("#hidePara").click( function (){
+                    $("#abc").hide(2000);
+                });
+
+                $("#togglePara").click( function (){
+                    $("#abc").toggle(2000);
+                });
+
+        });
+    </script>
+</body>
+
+</html>

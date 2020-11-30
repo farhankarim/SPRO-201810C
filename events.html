@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <input type="button" onmousemove="col()" value="CLICK ME" onclick="col()" ondblclick="message('black','white')"
+        onmouseover="message('red','brown')" onmouseout="message('white','black')">
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae dignissimos blanditiis sit
+        odit! Quas perspiciatis similique nam officia earum, nemo enim praesentium quisquam reprehenderit dolorem nobis,
+        facilis quo voluptatum facere.</p>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, deleniti quas dicta exercitationem
+        amet libero nemo. Aperiam alias, incidunt quidem vel hic facere quaerat doloribus, maiores, corporis earum
+        maxime ipsam.</p>
+    <script>
+
+        function get(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        function randomColor() {
+            return "rgb(" + get(0, 255) + "," + get(0, 255) + "," + get(0, 255) + ")";
+        }
+        function col() {
+            document.body.style.backgroundColor = randomColor();
+        }
+        function message(color, color1) {
+            for (var index = 0; index < document.getElementsByClassName("para").length; index++) {
+                document.getElementsByClassName("para")[index].style.backgroundColor = color;
+                document.getElementsByClassName("para")[index].style.color = color1;
+            }
+        }
+    </script>
+</body>
+
+</html>

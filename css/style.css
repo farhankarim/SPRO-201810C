@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+background-image: url("");
+}
+.logo,.left_side_nav,.right_side_nav{
+    display: inline;
+   
+    float: left;
+    width: 33.33%;
+}
+.logo{
+    text-align: center;
+}
+.right_side_nav{
+    text-align: end;
+}
+.left_side_nav ul li a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.right_side_nav ul li a:link {
+    color: white;
+    text-decoration: none;
+}
+.right_side_nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.left_side_nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.left_side_nav ul li a,.right_side_nav ul li a{
+    transition: all 2s ease;
+
+}
+.left_side_nav ul li a:hover,.right_side_nav ul li a:hover {
+color:red;
+background-color: gold;
+border: 3px solid blue;
+text-decoration: underline;
+font-weight: bolder;
+}
+
+.left_side_nav ul li, .right_side_nav ul li {
+    display: inline;
+}
+
+header {
+    background-color: black;
+}
+
+section {
+    overflow: auto;
+}
+
+@keyframes multicoslor{
+
+0% {
+background-color: blue;
+color:red;
+font-size: large;
+
+}
+
+25%{
+    background-color: yellow;
+color:purple;
+}
+50%{
+background-color: blueviolet;
+color: yellow;
+font-size: larger;
+
+
+}
+75%{
+background-color: orange;
+color: palegreen;
+
+}
+100%{
+background-color: palegreen;
+font-size: x-large;
+
+}
+
+}
+@keyframes widthadjsust{
+    from { margin-left: 100%; } to { margin-left: -100% }   
+
+}
+
+.left_menu {
+animation:  6s linear  infinite alternate multicolor;
+}
+
+.left_menu h1{
+    animation: 4s alternate infinite widthadjust;
+}
+
+.main_content {
+    background-color: tomato;
+}
+
+.site_ads {
+    background-color: teal;
+}
+.left_menu h1{
+    display: inline;
+}
+.left_menu, .main_content, .site_ads {
+    float: left;
+    width: 33.33%;
+    height: 80vh;
+    border: 1px solid black;
+    text-align: center;
+}
+
+header, footer {
+    height: 10vh;
+}
+
+section .left_menu h1:nth-child(3) {
+    color: red;
+}
+
+section .left_menu h1:nth-child(4) {
+    color: green;
+}
+
+.left_side_nav ul li:nth-child(3) {
+    color: green;
+}
+
+.my_data, th, td {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.my_data thead:hover {
+    border-top: 11px groove black;
+}
+
+.my_data td {
+    margin: 10px;
+    padding: 10px;
+}
+
+.my_data tr:nth-child(even):hover {
+    background-color: black;
+    color: white;
+}
+
+.my_data tr:nth-child(odd):hover {
+    background-color: rgb(190, 190, 187);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th class="">Shape</th>
+            <th>Area</th>
+        </tr>
+        <tr>
+            <td class="area"></td>
+            <td id="circle"></td>
+        </tr>
+        <tr>
+            <td class="area"></td>
+            <td id="cone"></td>
+        </tr>
+        <tr>
+            <td class="area"></td>
+            <td id="cone"></td>
+        </tr>
+    </table>
+    <script>
+        // var a=parseInt(prompt("Enter first Number"));
+
+
+        var r = parseInt(prompt("Enter Radius"));
+        if (!(r == 0)) {
+            alert("Radius can only be 0");
+        }
+
+        else {
+            var circleTd = document.getElementById("circle");
+            var c = Math.PI * Math.pow(r, 2);
+            circleTd.innerHTML = c;
+
+
+            var d = 4 * Math.PI * Math.pow(r, 2);
+            document.getElementById("cone").innerHTML = d;
+
+            var last = document.getElementsByClassName("area").length;
+            document.getElementsByClassName("area")[last - 3].innerHTML = "Circle";
+            document.getElementsByClassName("area")[last - 2].innerHTML = "Cone";
+            document.getElementsByClassName("area")[last - 1].innerHTML = "Rectangle";
+
+            document.getElementsByClassName("area")[0].innerHTML = "Circle";
+            document.getElementsByClassName("area")[1].innerHTML = "Cone";
+            document.getElementsByClassName("area")[2].innerHTML = "Rectangle";
+
+
+        }
+
+
+        
+    </script>
+</body>
+
+</html>

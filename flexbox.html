@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid green;
+        }
+        .child {
+            width: 30%;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .footer{
+            background-color: yellow;
+            display: flex;
+        }
+        .left{
+            background-color: yellowgreen;
+            flex-basis: 50%;
+            flex-shrink: 1;
+            flex-grow: 3;
+        }
+        .right{
+            background-color: gray;
+            flex-basis: 50%;
+        }
+        .center{
+            background-color: indigo;
+        }
+        .right{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child" style="order: 5;">1</div>
+        <div class="child">2</div>
+        <div class="child" style="order: 66;">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child" style="order: -1;">6</div>
+    </div>
+    <div class="footer">
+        <div class="left">left</div>
+        <div class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque totam recusandae quis dolorum quasi reiciendis eum laborum enim nisi nulla illum distinctio optio a, soluta numquam aut error suscipit excepturi!</div>
+        <div class="right">right</div>
+    </div>
+</body>
+
+</html>
